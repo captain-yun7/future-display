@@ -69,6 +69,18 @@ export default function DisplayPage({ params }: DisplayPageProps) {
           <p className="text-xl lg:text-2xl text-white/80 leading-relaxed max-w-3xl mx-auto">
             {display.description}
           </p>
+
+          {/* 역사 섹션 */}
+          {display.history && (
+            <div className="mt-12 p-8 bg-black-light rounded-2xl border-2 border-green/20 text-left">
+              <h3 className="text-2xl font-bold text-green mb-4">
+                {display.name}의 역사
+              </h3>
+              <p className="text-lg text-white/90 leading-relaxed">
+                {display.history}
+              </p>
+            </div>
+          )}
         </div>
       </Section>
 
@@ -87,7 +99,6 @@ export default function DisplayPage({ params }: DisplayPageProps) {
           <TechSection
             title="기술 원리"
             items={display.principle}
-            icon="⚡"
             variant="primary"
           />
         </div>
@@ -108,7 +119,6 @@ export default function DisplayPage({ params }: DisplayPageProps) {
           <TechSection
             title="제조 단계"
             items={display.manufacturing}
-            icon="🏭"
             variant="secondary"
           />
         </div>
@@ -130,13 +140,11 @@ export default function DisplayPage({ params }: DisplayPageProps) {
             <TechSection
               title="장점"
               items={display.advantages}
-              icon="✅"
               variant="primary"
             />
             <TechSection
               title="단점"
               items={display.disadvantages}
-              icon="⚠️"
               variant="accent"
             />
           </div>
@@ -158,11 +166,39 @@ export default function DisplayPage({ params }: DisplayPageProps) {
           <TechSection
             title="주요 응용 분야"
             items={display.applications}
-            icon="🎯"
             variant="secondary"
           />
         </div>
       </Section>
+
+      {/* 재미있는 사실 섹션 */}
+      {display.funFacts && display.funFacts.length > 0 && (
+        <Section background="secondary" padding="xl">
+          <div className="max-w-5xl mx-auto space-y-8">
+            <div className="text-center">
+              <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
+                추가 <span className="text-green">정보</span>
+              </h2>
+              <p className="text-lg text-gray-400">
+                {display.name}에 관한 흥미로운 사실
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              {display.funFacts.map((fact, index) => (
+                <div
+                  key={index}
+                  className="p-8 bg-black-light border-2 border-green/20 rounded-xl"
+                >
+                  <p className="text-lg text-white/90 leading-relaxed">
+                    {fact}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Section>
+      )}
 
       {/* 다른 디스플레이 보기 */}
       <Section background="secondary" padding="xl">

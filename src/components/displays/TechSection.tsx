@@ -6,14 +6,12 @@ import { Card } from '@/components/ui';
 interface TechSectionProps {
   title: string;
   items: string[];
-  icon?: React.ReactNode;
   variant?: 'primary' | 'secondary' | 'accent';
 }
 
 export default function TechSection({
   title,
   items,
-  icon,
   variant = 'primary',
 }: TechSectionProps) {
   const variantStyles = {
@@ -37,10 +35,7 @@ export default function TechSection({
     >
       <Card variant="elevated" className={`${variantStyles[variant]} border-2`}>
         <div className="p-8">
-          <div className="mb-6 flex items-center gap-3">
-            {icon && (
-              <div className={`${iconColors[variant]} text-2xl`}>{icon}</div>
-            )}
+          <div className="mb-6">
             <h3 className="text-2xl font-bold text-white">{title}</h3>
           </div>
           <ul className="space-y-3">
