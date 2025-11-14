@@ -24,7 +24,6 @@ export const Layout: React.FC<LayoutProps> = ({
   className,
   showSidebar = true,
   showFooter = false,
-  fullWidth = false,
 }) => {
   return (
     <div className="min-h-screen bg-white flex">

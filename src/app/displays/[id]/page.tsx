@@ -4,7 +4,6 @@
  */
 
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
 import Image from 'next/image';
 import { Layout, Section } from '@/components/layout';
 import { TechSection } from '@/components/displays';
