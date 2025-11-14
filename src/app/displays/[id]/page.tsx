@@ -5,6 +5,7 @@
 
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Layout, Section } from '@/components/layout';
 import { TechSection } from '@/components/displays';
 import { getDisplayById, DISPLAY_TYPES } from '@/lib/displayData';
@@ -84,8 +85,41 @@ export default function DisplayPage({ params }: DisplayPageProps) {
         </div>
       </Section>
 
+      {/* 이미지 갤러리 섹션 */}
+      {display.images && display.images.length > 0 && (
+        <Section background="secondary" padding="xl">
+          <div className="max-w-6xl mx-auto space-y-8">
+            <div className="text-center">
+              <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
+                상세 <span className="text-green">이미지</span>
+              </h2>
+              <p className="text-lg text-gray-400">
+                {display.name} 디스플레이의 구조와 원리를 시각적으로 살펴보세요
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {display.images.map((imagePath, index) => (
+                <div
+                  key={index}
+                  className="relative aspect-video rounded-xl overflow-hidden border-2 border-green/20 hover:border-green/50 transition-all duration-300"
+                >
+                  <Image
+                    src={imagePath}
+                    alt={`${display.name} - 이미지 ${index + 1}`}
+                    fill
+                    className="object-contain bg-white"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </Section>
+      )}
+
       {/* 작동 원리 섹션 */}
-      <Section background="secondary" padding="xl">
+      <Section padding="xl">
         <div className="max-w-5xl mx-auto space-y-8">
           <div className="text-center">
             <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
@@ -105,7 +139,7 @@ export default function DisplayPage({ params }: DisplayPageProps) {
       </Section>
 
       {/* 제조 공정 섹션 */}
-      <Section padding="xl">
+      <Section background="secondary" padding="xl">
         <div className="max-w-5xl mx-auto space-y-8">
           <div className="text-center">
             <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
@@ -125,7 +159,7 @@ export default function DisplayPage({ params }: DisplayPageProps) {
       </Section>
 
       {/* 장단점 비교 섹션 */}
-      <Section background="secondary" padding="xl">
+      <Section padding="xl">
         <div className="max-w-6xl mx-auto space-y-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
@@ -152,7 +186,7 @@ export default function DisplayPage({ params }: DisplayPageProps) {
       </Section>
 
       {/* 활용 사례 섹션 */}
-      <Section padding="xl">
+      <Section background="secondary" padding="xl">
         <div className="max-w-5xl mx-auto space-y-8">
           <div className="text-center">
             <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
@@ -173,7 +207,7 @@ export default function DisplayPage({ params }: DisplayPageProps) {
 
       {/* 재미있는 사실 섹션 */}
       {display.funFacts && display.funFacts.length > 0 && (
-        <Section background="secondary" padding="xl">
+        <Section padding="xl">
           <div className="max-w-5xl mx-auto space-y-8">
             <div className="text-center">
               <h2 className="text-3xl md:text-5xl font-black text-white mb-4">

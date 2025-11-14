@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Card } from '@/components/ui';
 
@@ -9,6 +10,7 @@ interface DisplayCardProps {
   name: string;
   fullName: string;
   description: string;
+  image?: string;
   index: number;
 }
 
@@ -17,6 +19,7 @@ export default function DisplayCard({
   name,
   fullName,
   description,
+  image,
   index,
 }: DisplayCardProps) {
   return (
@@ -29,8 +32,19 @@ export default function DisplayCard({
       <Link href={`/displays/${id}`}>
         <Card
           variant="elevated"
-          className="h-full cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-glow-green"
+          className="h-full cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-glow-green overflow-hidden"
         >
+          {image && (
+            <div className="relative h-48 w-full">
+              <Image
+                src={image}
+                alt={name}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+            </div>
+          )}
           <div className="p-8">
             <h3 className="mb-2 text-4xl font-bold text-primary">{name}</h3>
             <p className="mb-4 text-sm text-white-off">{fullName}</p>

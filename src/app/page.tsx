@@ -55,6 +55,7 @@ export default function Home() {
               name={display.name}
               fullName={display.fullName}
               description={display.description}
+              image={display.image}
               index={index}
             />
           ))}
