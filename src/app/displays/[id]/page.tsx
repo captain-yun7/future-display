@@ -47,37 +47,25 @@ export default function DisplayPage({ params }: DisplayPageProps) {
   return (
     <Layout>
       {/* Hero Section */}
-      <Section background="primary" padding="xl" className="relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-green/5 rounded-full blur-3xl" />
-
-        <div className="relative z-10 max-w-4xl mx-auto text-center space-y-6">
-          <Link
-            href="/"
-            className="inline-flex items-center text-green hover:text-green-light transition-colors duration-300 mb-4"
-          >
-            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-            </svg>
-            홈으로 돌아가기
-          </Link>
-
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white">
+      <Section background="primary" padding="xl">
+        <div className="max-w-4xl mx-auto text-center space-y-6">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900">
             {display.name}
           </h1>
-          <p className="text-2xl lg:text-3xl font-bold text-green">
+          <p className="text-2xl lg:text-3xl font-bold text-blue-600">
             {display.fullName}
           </p>
-          <p className="text-xl lg:text-2xl text-white/80 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
             {display.description}
           </p>
 
           {/* 역사 섹션 */}
           {display.history && (
-            <div className="mt-12 p-8 bg-black-light rounded-2xl border-2 border-green/20 text-left">
-              <h3 className="text-2xl font-bold text-green mb-4">
+            <div className="mt-12 p-8 bg-gray-50 rounded-2xl border border-gray-200 text-left">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
                 {display.name}의 역사
               </h3>
-              <p className="text-lg text-white/90 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed">
                 {display.history}
               </p>
             </div>
@@ -90,10 +78,10 @@ export default function DisplayPage({ params }: DisplayPageProps) {
         <Section background="secondary" padding="xl">
           <div className="max-w-6xl mx-auto space-y-8">
             <div className="text-center">
-              <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-                상세 <span className="text-green">이미지</span>
+              <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4">
+                상세 <span className="text-blue-600">이미지</span>
               </h2>
-              <p className="text-lg text-gray-400">
+              <p className="text-lg text-gray-600">
                 {display.name} 디스플레이의 구조와 원리를 시각적으로 살펴보세요
               </p>
             </div>
@@ -102,7 +90,7 @@ export default function DisplayPage({ params }: DisplayPageProps) {
               {display.images.map((imagePath, index) => (
                 <div
                   key={index}
-                  className="relative aspect-video rounded-xl overflow-hidden border-2 border-green/20 hover:border-green/50 transition-all duration-300"
+                  className="relative aspect-video rounded-xl overflow-hidden border border-gray-200 hover:border-blue-400 transition-all duration-300 shadow-sm hover:shadow-md"
                 >
                   <Image
                     src={imagePath}
@@ -122,10 +110,10 @@ export default function DisplayPage({ params }: DisplayPageProps) {
       <Section padding="xl">
         <div className="max-w-5xl mx-auto space-y-8">
           <div className="text-center">
-            <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-              작동 <span className="text-green">원리</span>
+            <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4">
+              작동 <span className="text-blue-600">원리</span>
             </h2>
-            <p className="text-lg text-gray-400">
+            <p className="text-lg text-gray-600">
               {display.name}가 어떻게 작동하는지 단계별로 알아보세요
             </p>
           </div>
@@ -142,10 +130,10 @@ export default function DisplayPage({ params }: DisplayPageProps) {
       <Section background="secondary" padding="xl">
         <div className="max-w-5xl mx-auto space-y-8">
           <div className="text-center">
-            <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-              제조 <span className="text-green">공정</span>
+            <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4">
+              제조 <span className="text-blue-600">공정</span>
             </h2>
-            <p className="text-lg text-gray-400">
+            <p className="text-lg text-gray-600">
               {display.name} 디스플레이의 제조 과정을 살펴보세요
             </p>
           </div>
@@ -162,10 +150,10 @@ export default function DisplayPage({ params }: DisplayPageProps) {
       <Section padding="xl">
         <div className="max-w-6xl mx-auto space-y-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-              장단점 <span className="text-green">비교</span>
+            <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4">
+              장단점 <span className="text-blue-600">비교</span>
             </h2>
-            <p className="text-lg text-gray-400">
+            <p className="text-lg text-gray-600">
               {display.name}의 강점과 약점을 파악하세요
             </p>
           </div>
@@ -189,10 +177,10 @@ export default function DisplayPage({ params }: DisplayPageProps) {
       <Section background="secondary" padding="xl">
         <div className="max-w-5xl mx-auto space-y-8">
           <div className="text-center">
-            <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-              활용 <span className="text-green">사례</span>
+            <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4">
+              활용 <span className="text-blue-600">사례</span>
             </h2>
-            <p className="text-lg text-gray-400">
+            <p className="text-lg text-gray-600">
               {display.name}가 실제로 사용되는 분야를 알아보세요
             </p>
           </div>
@@ -210,10 +198,10 @@ export default function DisplayPage({ params }: DisplayPageProps) {
         <Section padding="xl">
           <div className="max-w-5xl mx-auto space-y-8">
             <div className="text-center">
-              <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-                추가 <span className="text-green">정보</span>
+              <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4">
+                추가 <span className="text-blue-600">정보</span>
               </h2>
-              <p className="text-lg text-gray-400">
+              <p className="text-lg text-gray-600">
                 {display.name}에 관한 흥미로운 사실
               </p>
             </div>
@@ -222,9 +210,9 @@ export default function DisplayPage({ params }: DisplayPageProps) {
               {display.funFacts.map((fact, index) => (
                 <div
                   key={index}
-                  className="p-8 bg-black-light border-2 border-green/20 rounded-xl"
+                  className="p-8 bg-gray-50 border border-gray-200 rounded-xl"
                 >
-                  <p className="text-lg text-white/90 leading-relaxed">
+                  <p className="text-lg text-gray-700 leading-relaxed">
                     {fact}
                   </p>
                 </div>
@@ -233,27 +221,6 @@ export default function DisplayPage({ params }: DisplayPageProps) {
           </div>
         </Section>
       )}
-
-      {/* 다른 디스플레이 보기 */}
-      <Section background="secondary" padding="xl">
-        <div className="text-center space-y-8">
-          <h2 className="text-3xl md:text-5xl font-black text-white">
-            다른 <span className="text-green">디스플레이</span> 보기
-          </h2>
-
-          <div className="flex flex-wrap justify-center gap-4">
-            {DISPLAY_TYPES.filter((d) => d.id !== display.id).map((d) => (
-              <Link
-                key={d.id}
-                href={`/displays/${d.id}`}
-                className="px-6 py-3 bg-black-light border-2 border-gray-800 hover:border-green text-white hover:text-green rounded-lg font-bold transition-all duration-300 hover:shadow-glow-green-sm"
-              >
-                {d.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </Section>
     </Layout>
   );
 }

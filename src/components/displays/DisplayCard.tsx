@@ -30,10 +30,7 @@ export default function DisplayCard({
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
       <Link href={`/displays/${id}`}>
-        <Card
-          variant="elevated"
-          className="h-full cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-glow-green overflow-hidden"
-        >
+        <div className="h-full cursor-pointer transition-all duration-300 hover:-translate-y-2 bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-xl">
           {image && (
             <div className="relative h-48 w-full">
               <Image
@@ -45,13 +42,13 @@ export default function DisplayCard({
               />
             </div>
           )}
-          <div className="p-8">
-            <h3 className="mb-2 text-4xl font-bold text-primary">{name}</h3>
-            <p className="mb-4 text-sm text-white-off">{fullName}</p>
-            <p className="text-white/80 leading-relaxed line-clamp-3">
+          <div className="p-6">
+            <h3 className="mb-2 text-3xl font-bold text-gray-900">{name}</h3>
+            <p className="mb-3 text-sm text-gray-600">{fullName}</p>
+            <p className="text-gray-700 leading-relaxed line-clamp-3">
               {description}
             </p>
-            <div className="mt-6 flex items-center text-primary">
+            <div className="mt-4 flex items-center text-blue-600">
               <span className="text-sm font-semibold">자세히 보기</span>
               <svg
                 className="ml-2 h-4 w-4"
@@ -68,7 +65,7 @@ export default function DisplayCard({
               </svg>
             </div>
           </div>
-        </Card>
+        </div>
       </Link>
     </motion.div>
   );

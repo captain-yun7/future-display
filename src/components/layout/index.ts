@@ -6,11 +6,12 @@
 // 메인 레이아웃 컴포넌트들
 export { Header } from './Header';
 export { Footer } from './Footer';
-export { 
-  Layout, 
-  Section, 
-  Container, 
-  Grid, 
+export { default as Sidebar } from './Sidebar';
+export {
+  Layout,
+  Section,
+  Container,
+  Grid,
   Flex,
   LoadingOverlay
 } from './Layout';

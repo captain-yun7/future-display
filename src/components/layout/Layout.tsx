@@ -5,13 +5,13 @@
 
 import React from 'react';
 import { cn } from '@/lib/utils';
-import Header from './Header';
+import Sidebar from './Sidebar';
 import Footer from './Footer';
 
 interface LayoutProps {
   children: React.ReactNode;
   className?: string;
-  showHeader?: boolean;
+  showSidebar?: boolean;
   showFooter?: boolean;
   fullWidth?: boolean;
 }
@@ -22,28 +22,28 @@ interface LayoutProps {
 export const Layout: React.FC<LayoutProps> = ({
   children,
   className,
-  showHeader = true,
-  showFooter = true,
+  showSidebar = true,
+  showFooter = false,
   fullWidth = false,
 }) => {
   return (
-    <div className="min-h-screen bg-background-primary flex flex-col">
-      {/* 헤더 */}
-      {showHeader && <Header />}
+    <div className="min-h-screen bg-white flex">
+      {/* 사이드바 */}
+      {showSidebar && <Sidebar />}
 
       {/* 메인 콘텐츠 */}
       <main
         className={cn(
           'flex-1',
-          !fullWidth && 'container mx-auto',
+          showSidebar && 'ml-64',
           className
         )}
       >
         {children}
-      </main>
 
-      {/* 푸터 */}
-      {showFooter && <Footer />}
+        {/* 푸터 */}
+        {showFooter && <Footer />}
+      </main>
     </div>
   );
 };
@@ -69,8 +69,8 @@ export const Section: React.FC<SectionProps> = ({
   id,
 }) => {
   const backgroundClasses = {
-    primary: 'bg-background-primary',
-    secondary: 'bg-background-secondary',
+    primary: 'bg-white',
+    secondary: 'bg-gray-50',
     transparent: 'bg-transparent',
   };
 
@@ -91,7 +91,7 @@ export const Section: React.FC<SectionProps> = ({
         className
       )}
     >
-      <div className={cn(!fullWidth && 'container mx-auto')}>
+      <div className={cn(!fullWidth && 'container mx-auto px-4 lg:px-8')}>
         {children}
       </div>
     </section>
