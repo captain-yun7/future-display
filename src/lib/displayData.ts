@@ -27,7 +27,7 @@ export const DISPLAY_TYPES: DisplayTech[] = [
       '브라운관(CRT)은 Cathode Ray Tube(음극선관)의 약자로, 예전 TV나 컴퓨터 모니터에서 사용되던 두꺼운 디스플레이입니다. 한때 저렴한 가격과 뛰어난 해상도 덕분에 디스플레이의 대표 기술이었지만, 디스플레이가 점점 얇고 가벼워지는 평판형으로 발전하면서 현재는 거의 사용되지 않습니다.',
     history:
       '1897년, 독일의 과학자 카를 페르디난트 브라운(Karl Ferdinand Braun)이 전자(음극선)를 진공관 안에서 쏘면 형광체가 빛을 내는 현상을 발견하면서 이 기술이 개발되었고, 그의 이름을 따서 "브라운관"이라고 부르게 되었습니다.',
-    image: '/displays/crt/preview.png',
+    image: '/requirement1/9d083dfb-c074-4a98-b3a6-c9b4bad247f9.webp',
     images: [
       '/displays/crt/image1.BMP',
       '/displays/crt/image2.BMP',
@@ -79,7 +79,7 @@ export const DISPLAY_TYPES: DisplayTech[] = [
     fullName: 'Liquid Crystal Display',
     description:
       '액정 디스플레이는 액정의 광학적 성질을 이용하여 빛을 제어하는 평판 디스플레이입니다. 백라이트에서 나온 빛이 액정을 통과하면서 이미지를 만들어냅니다.',
-    image: '/displays/lcd/preview.png',
+    image: '/requirement1/82c99311-8d99-427c-b8c9-69470d77ebab.webp',
     images: [
       '/displays/lcd/image1.bmp',
       '/displays/lcd/image2.GIF',
@@ -128,7 +128,7 @@ export const DISPLAY_TYPES: DisplayTech[] = [
     fullName: 'Light Emitting Diode Display',
     description:
       'LED 디스플레이는 발광 다이오드를 직접 사용하여 빛을 발생시키는 디스플레이입니다. 각 픽셀이 독립적으로 빛을 내어 밝고 선명한 화면을 만듭니다.',
-    image: '/displays/led/preview.png',
+    image: '/requirement1/26275649-cc0c-444a-9ec9-fbb96057d680.webp',
     images: [
       '/displays/led/image1.bmp',
       '/displays/led/image2.bmp',
@@ -177,7 +177,7 @@ export const DISPLAY_TYPES: DisplayTech[] = [
     fullName: 'Organic Light-Emitting Diodes',
     description:
       '유기 발광 다이오드는 유기 화합물을 사용하여 빛을 발생시키는 자체 발광 디스플레이입니다. 백라이트 없이 각 픽셀이 독립적으로 빛을 내어 완벽한 검은색과 높은 명암비를 구현합니다.',
-    image: '/displays/oled/preview.png',
+    image: '/requirement1/f05ec1d6-3e61-4752-aeeb-5ee4b744aae6.webp',
     images: [
       '/displays/oled/image1.bmp',
       '/displays/oled/image2.bmp',
@@ -231,7 +231,7 @@ export const DISPLAY_TYPES: DisplayTech[] = [
     fullName: 'Quantum Dot Light Emitting Diode',
     description:
       '퀀텀닷 디스플레이는 나노 크기의 반도체 결정(퀀텀닷)을 사용하여 색순도가 매우 높은 빛을 만들어내는 디스플레이입니다. LCD 백라이트에 퀀텀닷 필름을 적용하여 색재현율을 극대적으로 향상시킵니다.',
-    image: '/sample.webp',
+    image: '/requirement1/d77c9ee1-4e9c-464c-bd34-23bf666b1338.webp',
     principle: [
       'LED 백라이트에서 청색 빛 발생',
       '퀀텀닷 필름에 청색 빛 조사',
@@ -279,7 +279,7 @@ export const DISPLAY_TYPES: DisplayTech[] = [
     fullName: 'Micro Light Emitting Diode',
     description:
       'MicroLED는 마이크로미터 크기의 초소형 LED를 픽셀로 사용하는 차세대 디스플레이 기술입니다. 자체 발광 방식으로 OLED의 장점을 가지면서도 더 높은 밝기와 긴 수명을 자랑합니다.',
-    image: '/displays/microled/preview.png',
+    image: '/requirement1/ebfc854f-ab95-4c63-83dd-48687156b11a.webp',
     images: [
       '/displays/microled/image1.bmp',
     ],

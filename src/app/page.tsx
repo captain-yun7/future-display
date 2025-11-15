@@ -11,26 +11,39 @@ import { DISPLAY_TYPES } from '@/lib/displayData';
 export default function Home() {
   return (
     <Layout>
-      {/* Hero Section with sample.webp */}
+      {/* Hero Section with intro video */}
       <Section background="primary" padding="xl">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 leading-tight mb-6">
-              세계 제미실이
-            </h1>
+            <div className="flex items-center justify-center gap-6 mb-6">
+              <Image
+                src="/requirement1/logo.webp"
+                alt="충북보건과학대학교 로고"
+                width={120}
+                height={120}
+                className="object-contain"
+                priority
+              />
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 leading-tight">
+                세계 제미실이
+              </h1>
+            </div>
             <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed">
               차세대 디스플레이 기술의 원리와 제조 공정을 탐구합니다
             </p>
           </div>
 
           <div className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden">
-            <Image
-              src="/sample.webp"
-              alt="차세대 디스플레이"
-              fill
-              className="object-cover"
-              priority
-            />
+            <video
+              src="/requirement1/main-intro.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            >
+              차세대 디스플레이 소개 영상
+            </video>
           </div>
         </div>
       </Section>

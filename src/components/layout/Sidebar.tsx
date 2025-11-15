@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { DISPLAY_TYPES } from '@/lib/displayData';
 
@@ -11,11 +12,20 @@ export default function Sidebar() {
     <aside className="fixed left-0 top-0 h-screen w-64 bg-white border-r border-gray-200 overflow-y-auto">
       {/* 헤더 */}
       <div className="p-6 border-b border-gray-200">
-        <Link href="/" className="block">
-          <h1 className="text-xl font-bold text-gray-900">
-            충북보건과학대학교
-          </h1>
-          <p className="text-sm text-gray-600 mt-1">세계 제미실이</p>
+        <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="/requirement1/logo.webp"
+            alt="충북보건과학대학교 로고"
+            width={60}
+            height={60}
+            className="object-contain flex-shrink-0"
+          />
+          <div>
+            <h1 className="text-lg font-bold text-gray-900">
+              충북보건과학대학교
+            </h1>
+            <p className="text-sm text-gray-600 mt-1">세계 제미실이</p>
+          </div>
         </Link>
       </div>
 
