@@ -25,11 +25,11 @@ export default function Home() {
                 priority
               />
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 leading-tight">
-                세계 제미실이
+                충북보건과학대학교
               </h1>
             </div>
             <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed">
-              차세대 디스플레이 기술의 원리와 제조 공정을 탐구합니다
+              "디스플레이? 같이 알아봅시다!" CRT부터 MicroLED까지, 한번에 끝내는 디스플레이 가이드
             </p>
           </div>
 

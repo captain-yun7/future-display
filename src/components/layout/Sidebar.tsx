@@ -21,10 +21,10 @@ export default function Sidebar() {
             className="object-contain flex-shrink-0"
           />
           <div>
-            <h1 className="text-lg font-bold text-gray-900">
+            <h1 className="text-base font-bold text-gray-900 whitespace-nowrap">
               충북보건과학대학교
             </h1>
-            <p className="text-sm text-gray-600 mt-1">세계 제미실이</p>
+            <p className="text-sm text-gray-600 mt-1 whitespace-nowrap">COSS혁신융합대학사업단</p>
           </div>
         </Link>
       </div>
