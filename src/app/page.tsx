@@ -29,7 +29,7 @@ export default function Home() {
               </h1>
             </div>
             <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed">
-              "디스플레이? 같이 알아봅시다!" CRT부터 MicroLED까지, 한번에 끝내는 디스플레이 가이드
+              &quot;디스플레이? 같이 알아봅시다!&quot; CRT부터 MicroLED까지, 한번에 끝내는 디스플레이 가이드
             </p>
           </div>
 
