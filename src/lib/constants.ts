@@ -1,5 +1,5 @@
 /**
- * JPEX 프로젝트 상수 정의
+ * 충북보건과학대학교 COSS혁신융합대학사업단 프로젝트 상수 정의
  * 전역적으로 사용되는 상수값들을 중앙 관리
  */
 
@@ -8,17 +8,17 @@
 // ============================================================================
 
 export const SITE_CONFIG = {
-  name: 'JPEX',
-  title: 'JPEX - 프리랜서 웹 개발 & AI 솔루션',
-  description: '전문적인 웹/앱 개발 및 AI 솔루션 서비스를 제공하는 프리랜서 개발자입니다.',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://jpex.kr',
+  name: '충북보건과학대학교 COSS혁신융합대학사업단',
+  title: '충북보건과학대학교 COSS혁신융합대학사업단 | 차세대 디스플레이 기술',
+  description: '충북보건과학대학교 COSS혁신융합대학사업단에서 제공하는 차세대 디스플레이 기술 학습 웹사이트입니다.',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://future-display.kr',
   ogImage: '/images/og-image.jpg',
   author: {
-    name: 'JPEX Developer',
-    email: 'contact@jpex.kr',
-    twitter: '@jpex_dev',
-    github: 'https://github.com/jpex-dev',
-    linkedin: 'https://linkedin.com/in/jpex-dev',
+    name: '충북보건과학대학교',
+    email: 'contact@chsu.ac.kr',
+    twitter: '@chsu_coss',
+    github: 'https://github.com/chsu',
+    linkedin: 'https://linkedin.com/in/chsu',
   },
 } as const;
 
@@ -445,18 +445,18 @@ export const CONTACT_INFO = {
 // ============================================================================
 
 export const SEO_CONFIG = {
-  titleTemplate: '%s | JPEX',
-  defaultTitle: 'JPEX - 프리랜서 웹 개발 & AI 솔루션',
-  description: '전문적인 웹/앱 개발 및 AI 솔루션 서비스를 제공하는 프리랜서 개발자입니다.',
+  titleTemplate: '%s | 충북보건과학대학교 COSS혁신융합대학사업단',
+  defaultTitle: '충북보건과학대학교 COSS혁신융합대학사업단 | 차세대 디스플레이 기술',
+  description: '충북보건과학대학교 COSS혁신융합대학사업단에서 제공하는 차세대 디스플레이 기술 학습 웹사이트입니다. OLED, QLED, Micro LED, Mini LED, AMOLED 등 다양한 디스플레이 기술을 학습할 수 있습니다.',
   keywords: [
-    '웹개발', '앱개발', 'AI개발', '프리랜서',
-    'React', 'Next.js', 'TypeScript', 'Node.js',
-    '웹사이트제작', '모바일앱', '인공지능', '챗봇',
-    '기술컨설팅', '성능최적화', '반응형웹',
+    '충북보건과학대학교', 'COSS', '차세대디스플레이', '디스플레이기술',
+    'OLED', 'QLED', 'Micro LED', 'Mini LED', 'AMOLED',
+    '플렉시블디스플레이', '투명디스플레이', '홀로그램',
+    '전자종이', 'E-ink', '양자점디스플레이',
   ],
-  author: 'JPEX Developer',
-  creator: 'JPEX',
-  publisher: 'JPEX',
+  author: '충북보건과학대학교 COSS',
+  creator: '충북보건과학대학교',
+  publisher: '충북보건과학대학교',
   robots: 'index,follow',
   googlebot: 'index,follow',
   verification: {

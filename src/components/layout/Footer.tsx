@@ -1,6 +1,6 @@
 /**
  * Footer 컴포넌트
- * 충북보건과학대학교 - 세계 제미실이
+ * 충북보건과학대학교 COSS혁신융합대학사업단
  */
 
 'use client';
@@ -39,7 +39,7 @@ export const Footer: React.FC<FooterProps> = ({ className }) => {
           >
             <div className="text-center md:text-left">
               <p className="text-sm text-gray-400">
-                © {currentYear} <span className="text-green font-semibold">충북보건과학대학교 - 세계 제미실이</span>
+                © {currentYear} <span className="text-green font-semibold">충북보건과학대학교 COSS혁신융합대학사업단</span>
               </p>
               <p className="text-xs text-gray-600 mt-1">
                 차세대 디스플레이 학습 웹사이트
@@ -51,7 +51,7 @@ export const Footer: React.FC<FooterProps> = ({ className }) => {
 
       <motion.button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-6 right-6 w-12 h-12 bg-green text-black rounded-full shadow-glow-green hover:shadow-glow-green-lg transition-all duration-300 hover:scale-110 z-20"
+        className="fixed bottom-6 right-6 w-12 h-12 bg-green text-black rounded-full shadow-glow-green transition-all duration-300 z-20"
         aria-label="맨 위로 이동"
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}

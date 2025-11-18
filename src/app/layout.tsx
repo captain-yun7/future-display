@@ -1,6 +1,6 @@
 /**
  * RootLayout 컴포넌트
- * JPEX 프리랜싱 웹사이트의 루트 레이아웃
+ * 충북보건과학대학교 COSS혁신융합대학사업단 웹사이트의 루트 레이아웃
  */
 
 import type { Metadata } from "next";

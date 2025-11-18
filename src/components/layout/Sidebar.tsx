@@ -73,7 +73,7 @@ export default function Sidebar() {
             href="https://blog.naver.com/chsu_coss"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 hover:text-green-600 transition-colors"
+            className="text-gray-600 transition-colors"
             aria-label="Naver Blog"
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

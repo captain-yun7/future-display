@@ -1,6 +1,6 @@
 /**
  * Header 컴포넌트
- * 충북보건과학대학교 - 세계 제미실이
+ * 충북보건과학대학교 COSS혁신융합대학사업단
  */
 
 'use client';
@@ -68,8 +68,8 @@ const Logo: React.FC = () => (
       <span className="text-sm lg:text-base font-bold text-white/70">
         충북보건과학대학교
       </span>
-      <span className="text-xl lg:text-2xl font-black text-white group-hover:text-green transition-colors duration-300">
-        세계 제미실이
+      <span className="text-xl lg:text-2xl font-black text-white">
+        COSS혁신융합대학사업단
       </span>
     </motion.div>
   </Link>
@@ -95,7 +95,6 @@ const NavLink: React.FC<NavLinkProps> = ({ href, children, className, onClick })
       onClick={onClick}
       className={cn(
         'relative px-4 py-2 text-base font-medium transition-colors duration-300 group',
-        'hover:text-green',
         isActive ? 'text-green' : 'text-white',
         className
       )}
@@ -168,7 +167,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
             <Logo />
             <button
               onClick={onClose}
-              className="p-2 text-gray-400 hover:text-green transition-colors"
+              className="p-2 text-gray-400 transition-colors"
               aria-label="메뉴 닫기"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -238,7 +237,7 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
             <DesktopNavigation />
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 text-white hover:text-green transition-colors"
+              className="lg:hidden p-2 text-white transition-colors"
               aria-label="메뉴 열기"
             >
               <MenuIcon isOpen={isMobileMenuOpen} />

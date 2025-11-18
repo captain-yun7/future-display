@@ -164,16 +164,7 @@ body {
   border: 0;
 }
 
-/* 선택 영역 스타일 - 그린 */
-::selection {
-  background-color: var(--color-accent);
-  color: #000000;  /* 그린 배경에 검정 텍스트 */
-}
-
-::-moz-selection {
-  background-color: var(--color-accent);
-  color: #000000;
-}
+/* 선택 영역 스타일 제거됨 */
 
 /* 스크롤바 스타일 (Webkit) - 그린 */
 ::-webkit-scrollbar {
@@ -186,23 +177,14 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-accent);
+  background: #666666;
   border-radius: 4px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-accent-hover);
-}
-
-/* 기본 링크 스타일 - 그린 */
+/* 기본 링크 스타일 */
 a {
-  color: var(--color-accent);
+  color: inherit;
   text-decoration: none;
-  transition: color var(--duration-smooth) var(--ease-in-out);
-}
-
-a:hover {
-  color: var(--color-accent-hover);
 }
 
 /* 이미지 기본 스타일 */
